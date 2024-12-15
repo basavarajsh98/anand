@@ -3830,6 +3830,44 @@ img.u-pull-left {
     outline : 0;
 }
 
+.no-click {
+    pointer-events: none; /* Disables click events */
+    display             : block;
+    width               : 100%;
+    padding-left        : calc(5.5 * var(--space));
+    color               : white;
+    transition-duration : .5s;
+    position            : relative;
+}
+.no-click:hover {
+    color   : var(--color-1);
+    outline : 0;
+}
+
+
+.no-click:focus .folio-list__item-pic::before,
+.no-click:hover .folio-list__item-pic::before {
+    opacity    : 1;
+    visibility : visible;
+}
+
+.no-click:focus .folio-list__item-pic::after,
+.no-click:hover .folio-list__item-pic::after {
+    opacity    : 1;
+    visibility : visible;
+    transform  : scale(1);
+}
+
+.no-click:focus .folio-list__item-text::before,
+.no-click:hover .folio-list__item-text::before {
+    width : 100%;
+}
+
+
+
+
+
+
 .folio-list__item-link:focus .folio-list__item-pic::before,
 .folio-list__item-link:hover .folio-list__item-pic::before {
     opacity    : 1;
@@ -3995,8 +4033,8 @@ img.u-pull-left {
 }
 
 .modal-popup__desc {
-    /* margin-top : var(--vspace-0_75); */
-    max-height: 300px; /* Adjust height as needed */
+    margin-top : var(--vspace-0_75);
+    max-height: 600px; /* Adjust height as needed */
     padding : 0 var(--vspace-1_25) var(--vspace-0_25);
     overflow-y: auto; /* Enables vertical scroll bar */
     /* border: 1px solid #ccc; Optional: Add a border for visual separation */
