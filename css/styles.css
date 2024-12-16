@@ -4567,7 +4567,7 @@ body {
     color: #bbb;
     text-transform: uppercase;
     position: absolute;
-    bottom: -40px; /* Positions label below the circle */
+    /* bottom: -200px; */
     width: 100%; /* Ensures the label spans the full width of the card */
     text-align: center; /* Centers the label horizontally */
     white-space: nowrap; /* Keeps the label on a single line */
@@ -4661,4 +4661,53 @@ body {
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+
+.skills-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skills-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.skills-item:hover {
+    background-color: #5f5d5d; /* White background */
+    color: #f1f1f1; /* Black text */
+    transform: scale(1.05); /* Zoom effect */
+}
+
+
+.skills-item:hover .skill-text {
+    font-weight: 700; /* Optional: Bold the text on hover */
+}
+
+.skill-icon {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #3b983e;
+    transition: color 0.3s ease;
+}
+
+.skill-text {
+    font-size: 18px;
+    font-weight: 500;
+    transition: font-weight 0.3s ease;
+}
+
+/* Optional: Use Font Awesome icons for better visual appeal */
+.fas {
+    font-family: 'Font Awesome 5 Free', sans-serif;
+    font-weight: 900;
 }
