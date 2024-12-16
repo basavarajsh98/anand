@@ -4664,6 +4664,7 @@ body {
 }
 
 
+
 .skills-list-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -4704,6 +4705,24 @@ body {
     font-size: 18px;
     font-weight: 500;
     transition: font-weight 0.3s ease;
+}
+
+/* Media Query for Mobile: Show only text */
+@media (max-width: 767px) {
+    .skills-item {
+        display: block; /* Stack the items vertically */
+        text-align: center; /* Center align the text */
+        background-color: transparent; /* Remove background color */
+        padding: 10px 0; /* Adjust padding for mobile view */
+    }
+
+    .skill-icon {
+        display: none; /* Hide icons on mobile */
+    }
+
+    .skills-item:hover {
+        transform: none; /* Disable zoom on hover for mobile */
+    }
 }
 
 /* Optional: Use Font Awesome icons for better visual appeal */
