@@ -4488,3 +4488,103 @@ img.u-pull-left {
         right : 6vw;
     }
 }
+
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.portfolio-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin: 100px 0;
+    text-align: center;
+}
+
+.stat-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-bottom: -20px; /* Space for label */
+    text-align: center; /* Ensures alignment within the card */
+}
+
+.stat-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #FBE7A1, 0 0 30px #FBE7A1;
+}
+
+.stat-card:hover::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, transparent 70%);
+    animation: ripple 1000s infinite;
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stat-icon {
+    color: #bbb;
+    font-size: 32px;
+    margin-bottom: 10px;
+    z-index: 2; /* Ensure it's above the ripple */
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: hsla(36, 72%, 70%, 1);
+    transition: transform 0.5s ease-out;
+    z-index: 2; /* Ensure it's above the ripple */
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #bbb;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -40px; /* Positions label below the circle */
+    width: 100%; /* Ensures the label spans the full width of the card */
+    text-align: center; /* Centers the label horizontally */
+    white-space: nowrap; /* Keeps the label on a single line */
+    /* overflow: hidden; Hides any overflow */
+    text-overflow: ellipsis; /* Adds ellipsis if the text is too long */
+}
+
+.stat-label {
+    position: absolute;
+    bottom: -45px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-label div {
+    line-height: 1.2;
+}
+
